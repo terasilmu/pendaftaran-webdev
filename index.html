@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <!-- Menggunakan file dari folder galery -->
+      <img src="galery/logo.png" alt="Logo WebDev" class="logo" onerror="this.style.display='none'">
+      <h2>Formulir Pendaftaran Web Developer</h2>
+      <p>Isi data diri Anda di bawah ini untuk bergabung sebagai tim pengembang web.</p>
+    </div>
+
+    <!-- Alert Notifikasi -->
+    <div id="alertBox" class="alert hidden"></div>
+
+    <form id="regForm" action="webdev.php" method="POST">
+      <div class="form-group">
+        <label for="nama">Nama Lengkap *</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Alamat Email *</label>
+        <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telepon">Nomor Telepon / WhatsApp *</label>
+        <input type="tel" id="telepon" name="telepon" placeholder="08123456789" required>
+      </div>
+
+      <div class="form-group">
+        <label for="posisi">Spesialisasi Posisi *</label>
+        <select id="posisi" name="posisi" required>
+          <option value="">-- Pilih Posisi --</option>
+          <option value="Frontend Developer">Frontend Developer</option>
+          <option value="Backend Developer">Backend Developer</option>
+          <option value="Fullstack Developer">Fullstack Developer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="pengalaman">Pengalaman Kerja</label>
+        <select id="pengalaman" name="pengalaman">
+          <option value="Fresh Graduate / < 1 Tahun">&lt; 1 Tahun (Fresh Graduate)</option>
+          <option value="1 - 3 Tahun">1 - 3 Tahun</option>
+          <option value="3 - 5 Tahun">3 - 5 Tahun</option>
+          <option value="> 5 Tahun">&gt; 5 Tahun</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="portfolio">Link Portfolio / GitHub</label>
+        <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/username">
+      </div>
+
+      <button type="submit" id="btnSubmit">Kirim Pendaftaran</button>
+    </form>
+  </div>
+<script src="main.js"></script>
+ 
+</body>
+</html>
